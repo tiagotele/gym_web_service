@@ -9,10 +9,14 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.security.version>3.2.3.RELEASE</spring.security.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<jackson.version>1.9.10</jackson.version>
 		<java.servlet.version>3.1.0</java.servlet.version>
+		<java.servlet.version>3.1.0</java.servlet.version>
+		<jstl.version>1.2</jstl.version>
+		<javax.servlet.jsp.version>2.1</javax.servlet.jsp.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,10 +44,31 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${java.servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${javax.servlet.jsp.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -52,6 +77,13 @@
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>${jackson.version}</version>
+		</dependency>
+
+		<!-- jstl for jsp page -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
 		</dependency>
 
 	</dependencies>
