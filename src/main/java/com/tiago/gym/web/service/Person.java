@@ -1,15 +1,15 @@
 package com.tiago.gym.web.service;
 
-public class SimplePOJO {
+public class Person {
 	private String name;
 	private Integer age;
 
-	public SimplePOJO() {
+	public Person() {
 		this.name = "Tiago Barbosa Melo";
 		this.age = 30;
 	}
 
-	public SimplePOJO(String name, Integer age) {
+	public Person(String name, Integer age) {
 		this.name = name;
 		this.age = age;
 	}
