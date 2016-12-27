@@ -11,6 +11,8 @@
 		<spring.version>4.0.1.RELEASE</spring.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<jackson.version>1.9.10</jackson.version>
+		<java.servlet.version>3.1.0</java.servlet.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,15 +40,19 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<version>${java.servlet.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
-
+		<!-- Jackson JSON Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 
 	</dependencies>
 
