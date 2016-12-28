@@ -17,6 +17,7 @@
 		<java.servlet.version>3.1.0</java.servlet.version>
 		<jstl.version>1.2</jstl.version>
 		<javax.servlet.jsp.version>2.1</javax.servlet.jsp.version>
+		<mysql.connector.version>5.1.30</mysql.connector.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +41,12 @@
 
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
@@ -56,6 +63,13 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -84,6 +98,13 @@
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
+		</dependency>
+
+		<!-- connect to mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
 		</dependency>
 
 	</dependencies>
