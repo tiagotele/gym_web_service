@@ -1,12 +1,17 @@
-package com.tiago.gym.web.service;
+package com.tiago.gym.web.service.models;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable{
+	private static final long serialVersionUID = -5100054710038170463L;
 	private String name;
 	private Integer age;
+	private Goal goal;
 
 	public Person() {
 		this.name = "Tiago Barbosa Melo";
 		this.age = 30;
+		this.goal = Goal.BODY_BUILDING;
 	}
 
 	public Person(String name, Integer age) {
@@ -30,4 +35,11 @@ public class Person {
 		this.age = age;
 	}
 
+	public Goal getGoal() {
+		return goal;
+	}
+
+	public void setGoal(Goal goal) {
+		this.goal = goal;
+	}
 }
