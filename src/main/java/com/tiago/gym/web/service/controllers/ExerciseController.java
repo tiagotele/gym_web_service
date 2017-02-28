@@ -12,7 +12,9 @@ import com.tiago.gym.web.service.models.Exercise;
 
 @Controller
 public class ExerciseController {
-	@RequestMapping(value = "/exercise", method = RequestMethod.GET)
+	private static final String path = "/exercise";
+	
+	@RequestMapping(value = path, method = RequestMethod.GET)
 	public @ResponseBody Exercise get(
 			@RequestParam(value = "id", required = true, defaultValue = "1") Long id) {
 		
@@ -28,19 +30,19 @@ public class ExerciseController {
 		return exercise;
 	}
 	
-	@RequestMapping(value = "/exercise", method = RequestMethod.DELETE)
+	@RequestMapping(value = path, method = RequestMethod.DELETE)
 	public @ResponseBody String delete(
 			@RequestParam(value = "id", required = false, defaultValue = "1") Long id) {
 		return "deleted";
 	}
 
-	@RequestMapping(value = "/exercise", method = RequestMethod.POST)
+	@RequestMapping(value = path, method = RequestMethod.POST)
 	public @ResponseBody Exercise add(
 			@RequestBody Exercise exercise) {
 		return exercise;
 	}
 	
-	@RequestMapping(value = "/exercise", method = RequestMethod.PUT)
+	@RequestMapping(value = path	, method = RequestMethod.PUT)
 	public @ResponseBody Exercise edit(
 			@RequestBody Exercise exercise) {
 		return exercise;
