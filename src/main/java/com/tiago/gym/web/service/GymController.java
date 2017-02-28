@@ -21,20 +21,20 @@ public class GymController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/person", method = RequestMethod.GET)
-	public @ResponseBody Person getPerson(
-			@RequestParam(value = "name", required = false, defaultValue = "Tiago") String name,
-			@RequestParam(value = "age", required = false, defaultValue = "30") Integer age) {
-		System.out.println("in the get");
-		return new Person(name, age);
-	}
-
-	@RequestMapping(value = "/person", method = RequestMethod.POST)
-	public @ResponseBody Person getPersonPost(
-			@RequestParam(value = "name", required = false, defaultValue = "Tiago") String name,
-			@RequestParam(value = "age", required = false, defaultValue = "30") Integer age) {
-		System.out.println("in the post");
-		return new Person(name, age);
-	}
+//	@RequestMapping(value = "/person", method = RequestMethod.GET)
+//	public @ResponseBody Person getPerson(
+//			@RequestParam(value = "name", required = false, defaultValue = "Tiago") String name,
+//			@RequestParam(value = "age", required = false, defaultValue = "30") Integer age) {
+//		System.out.println("in the get");
+//		return new Person(name, age);
+//	}
+//
+//	@RequestMapping(value = "/person", method = RequestMethod.POST)
+//	public @ResponseBody Person getPersonPost(
+//			@RequestParam(value = "name", required = false, defaultValue = "Tiago") String name,
+//			@RequestParam(value = "age", required = false, defaultValue = "30") Integer age) {
+//		System.out.println("in the post");
+//		return new Person(name, age);
+//	}
 
 }
