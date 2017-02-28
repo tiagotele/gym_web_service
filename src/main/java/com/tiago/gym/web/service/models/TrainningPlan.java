@@ -8,6 +8,8 @@ public class TrainningPlan implements Serializable{
 	private static final long serialVersionUID = 979903089796836626L;
 	Long id;
 	Set<TrainningGroup> trainningGroups;
+	Person person;
+	
 	public Long getId() {
 		return id;
 	}
@@ -19,5 +21,13 @@ public class TrainningPlan implements Serializable{
 	}
 	public void setTrainningGroups(Set<TrainningGroup> trainningGroups) {
 		this.trainningGroups = trainningGroups;
-	}	
+	}
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	
+	
 }

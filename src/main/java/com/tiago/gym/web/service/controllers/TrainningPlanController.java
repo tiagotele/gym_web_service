@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tiago.gym.web.service.models.Equipment;
 import com.tiago.gym.web.service.models.Exercise;
+import com.tiago.gym.web.service.models.Goal;
+import com.tiago.gym.web.service.models.Person;
 import com.tiago.gym.web.service.models.TrainningGroup;
 import com.tiago.gym.web.service.models.TrainningPlan;
 
@@ -43,6 +45,12 @@ public class TrainningPlanController {
 	}
 
 	private TrainningPlan generateTrainningPlan() {
+		
+		Person person = new Person();
+		person.setAge(20);
+		person.setGoal(Goal.LOSE_WEIGHT);
+		person.setName("Fulana");
+		
 		Equipment supinoBed = new Equipment();
 		supinoBed.setMachineNumber(90);
 		supinoBed.setName("supino bed");
@@ -68,6 +76,7 @@ public class TrainningPlanController {
 		TrainningPlan trainningPlan = new TrainningPlan();
 		trainningPlan.setId(5L);
 		trainningPlan.setTrainningGroups(new HashSet<TrainningGroup>(Arrays.asList(trainningGroup)));
+		trainningPlan.setPerson(person);
 		return trainningPlan;
 	}
 }
